@@ -28,14 +28,14 @@
       mapboxgl.accessToken = 'pk.eyJ1IjoianJtYWsiLCJhIjoiY2txaHBmdnRhMGJlbjJ3czdnOTYxODUwdyJ9.eOGUtnI479kE7ymbcIIkiw';
       const map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/examples/cjgiiz9ck002j2ss5zur1vjji',
+        style: 'mapbox://styles/jrmak/clbsh5lbh000b14rpeapi7i2d',
         center: [-87.661557, 41.893748],
         zoom: 10.7
       });
 
       map.on('click', (event) => {
         const features = map.queryRenderedFeatures(event.point, {
-          layers: ['chicago-parks']
+          layers: ['caves_test']
         });
         if (!features.length) {
           return;

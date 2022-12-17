@@ -35,7 +35,7 @@
 
       map.on('click', (event) => {
         const features = map.queryRenderedFeatures(event.point, {
-          layers: ['caves_test']
+          layers: ['symbols']
         });
         if (!features.length) {
           return;

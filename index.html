@@ -45,13 +45,13 @@
         const popup = new mapboxgl.Popup({ offset: [0, -15] })
           .setLngLat(feature.geometry.coordinates)
           .setHTML(
-            `<h2>${feature.properties.cavename}</h2>
+            `<h2>${feature.properties.name}</h2>
             <h3>${feature.properties.nearestcity}</h3>
             <center><a href=${feature.properties.imagelink}><img src=${feature.properties.imageurl}></a></center>
             <p>
             ${feature.properties.wikipedia}
             <br><br>
-            ${feature.properties.cavenotes}
+            ${feature.properties.notes}
             </p>`
           )
           .addTo(map);

@@ -29,8 +29,8 @@
       const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/jrmak/clbsh5lbh000b14rpeapi7i2d',
-        center: [-98, 36.5],
-        zoom: 2
+        center: [-102, 37],
+        zoom: 3
       });
 
       map.on('click', (event) => {
@@ -45,7 +45,14 @@
         const popup = new mapboxgl.Popup({ offset: [0, -15] })
           .setLngLat(feature.geometry.coordinates)
           .setHTML(
-            `<h3>${feature.properties.Name}</h3><p>${feature.properties.Notes}</p>`
+            `<h3>${feature.properties.CaveName}</h3>
+            <h2>${feature.properties.NearestCity}</h2>
+            <center><a href=${feature.properties.ImageLink}><img src=${feature.properties.ImageURL}></a></center>
+            <p>
+            ${feature.properties.WikipediaURL}
+            <br><br>
+            ${feature.properties.Notes}
+            </p>`
           )
           .addTo(map);
       });

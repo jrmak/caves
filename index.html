@@ -46,8 +46,8 @@
           .setLngLat(feature.geometry.coordinates)
           .setHTML(
             `<h2>${feature.properties.name}</h2>
-            <h3>${feature.properties.nearestcity}</h3>
-            <center><a href=${feature.properties.imagelink}><img src=${feature.properties.imageurl}></a></center>
+            <h3>${feature.properties.title}</h3>
+            <center><a href=${feature.properties.description}><img src=${feature.properties.imageurl}></a></center>
             <p>
             ${feature.properties.wikipedia}
             <br><br>
